@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
 import { axiosWithAuth } from "../utils/axiosWithAuth"
+import AddColorForm from "./AddColorForm"
 
 const initialColor = {
   color: "",
   code: { hex: "" }
 };
 
-const ColorList = ({ colors, updateColors }) => {
-  console.log(colors);
+const ColorList = ({ colors, updateColors, history }) => {
   const [editing, setEditing] = useState(false);
   const [colorToEdit, setColorToEdit] = useState(initialColor);
 
@@ -26,6 +26,11 @@ const ColorList = ({ colors, updateColors }) => {
           setEditing(false)
         })
       .catch(err => console.log("Your .PUT request failed dude!", err))
+      
+    setColorToEdit({
+      color: "",
+      code: { hex: "" }
+    })
   };
 
   const deleteColor = color => {
@@ -83,8 +88,7 @@ const ColorList = ({ colors, updateColors }) => {
           </div>
         </form>
       )}
-      <div className="spacer" />
-      {/* stretch - build another form here to add a color */}
+      <AddColorForm updateColors={updateColors} />
     </div>
   );
 };
