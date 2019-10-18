@@ -17,6 +17,8 @@ const ColorList = ({ colors, updateColors, history }) => {
     setColorToEdit(color);
   };
 
+  // Step 2B: 
+  // Complete saveEdit && deleteColor functions
   const saveEdit = e => {
     e.preventDefault();
     axiosWithAuth().put(`colors/${colorToEdit.id}`, colorToEdit)
@@ -88,6 +90,8 @@ const ColorList = ({ colors, updateColors, history }) => {
           </div>
         </form>
       )}
+      // STRETCH
+      // Implement form to add a new color
       <AddColorForm updateColors={updateColors} />
     </div>
   );

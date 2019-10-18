@@ -8,6 +8,9 @@ import { checkPropTypes } from "prop-types";
 const BubblePage = props => {
   const [colorList, setColorList] = useState([]);
   
+  // Step 2A:
+  // GET request when BubblePage loads
+  // Set data response to `colorList` state
   useEffect(() => {
     axiosWithAuth().get("colors")
       .then(res => setColorList(res.data))

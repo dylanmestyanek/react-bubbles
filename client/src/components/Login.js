@@ -17,10 +17,14 @@ const Login = props => {
     })
   }
 
+  // Step 1A:
+  // Axios request to receive token from server
   const handleSubmit = e => {
     e.preventDefault();
     axiosWithAuth().post("login", credentials)
       .then(res => {
+        // Step 1B:
+        // Save token to localStorage
         localStorage.setItem('token', res.data.payload)
         props.history.push("/bubble-page")
       })

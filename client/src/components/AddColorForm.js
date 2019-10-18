@@ -8,6 +8,7 @@ const AddColorForm = ({ updateColors }) => {
         code: { hex: "" }
     })
 
+    // POST request to add a new color to the array of data
     const handleSubmit = e => {
         e.preventDefault();
         axiosWithAuth().post("colors", color)
