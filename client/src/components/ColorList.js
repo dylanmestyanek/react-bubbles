@@ -35,7 +35,7 @@ const ColorList = ({ colors, updateColors, history }) => {
 
   const deleteColor = color => {
     axiosWithAuth().delete(`colors/${color.id}`)
-      .then(res => console.log(res))
+      .then(res => updateColors(res.data))
       .catch(err => console.log('Your .DELETE request failed!', err))
   };
 
