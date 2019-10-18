@@ -11,8 +11,8 @@ function App() {
     <Router>
       <div className="App">
         <Route exact path="/" component={Login} />
-        // Step 1D
-        // Render 'BubblePage' component through PrivateRoute
+        {/* // Step 1D
+        // Render 'BubblePage' component through PrivateRoute */}
         <PrivateRoute path="/bubble-page" component={BubblePage} />
       </div>
     </Router>

@@ -90,8 +90,8 @@ const ColorList = ({ colors, updateColors, history }) => {
           </div>
         </form>
       )}
-      // STRETCH
-      // Implement form to add a new color
+      {/* // STRETCH
+      // Implement form to add a new color */}
       <AddColorForm updateColors={updateColors} />
     </div>
   );
