@@ -19,7 +19,7 @@ const Login = props => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    axiosWithAuth().post("/login", credentials)
+    axiosWithAuth().post("login", credentials)
       .then(res => {
         localStorage.setItem('token', res.data.payload)
         props.history.push("/bubble-page")
