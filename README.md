@@ -29,10 +29,28 @@ In this project you will create a login page and request a token from the server
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Explain what a token is used for.
+
+  **Answer:** A token is used as a way to authenticate a user on a web page, and allow access to pages that are protected through a method such as private routes. These authentication tokens are used to protect the user's credentials and keep their session current while they are on the application. 
+
 - [ ] What steps can you take in your web apps to keep your data secure?
+
+  **Answer:** By using proper methods of user authentication you can ensure your data is secure by hiding pages behind restricted routes, having fetched data only being accessible to authenticated users, and ensuring credentials are stored safely, similar to a `.env` file for example.
+
 - [ ] Describe how web servers work.
+
+  **Answer:** Web servers are a way that web pages can make HTTP requests to access, and manipulate data. These web servers are a way to store data in an external location, but can provide the data to applications upon request. 
+
 - [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
 
+  **Answer:** CRUD can be mapped to the HTTP requests by:
+
+  **C, Create:** .POST requests allow the ability to create and add additional data to the current dataset.
+
+  **R, Read:** .GET requests allow the ability to retrieve and view the data from a web server.
+
+  **U, Update:** .PUT requests allow the ability to modify existing data, such as editing a username.
+
+  **D, Destroy:** .DELETE requests provide the ability to remove a piece of data from the dataset.
 
 ## Project Set Up
 
